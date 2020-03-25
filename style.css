@@ -1,0 +1,120 @@
+* {
+  /* Pre-formatting the website */
+
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #2f3030;
+}
+
+p {
+  /*Changing font and formatting the text*/
+
+  font-family: 'Raleway', sans-serif;
+  font-size: 2em;
+  line-height: 2em;
+  color: #c2c2c2;
+}
+
+p:hover {
+  animation: vibingText 1.2s infinite;
+}
+
+.mainGridContainer {
+  /* Makes the display into grid, creates 8 columns and sets the gaps between the columns and rows. Overflow is hidden to keep everything inside. Padding to push stuff inwards*/
+
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);/
+  grid-column-gap: 2vmin;
+  grid-row-gap: 2vmin;
+  overflow: hidden;
+  padding: 0px 5vmin 0px 5vmin;
+}
+
+.heroBanner{
+  /* img takes up the width */
+  width: 100%;
+}
+/*
+.linkContainer {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+} */
+
+.sectionHeadline {
+  font-size: 8vmin;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.08em;
+  transition: all 1s;
+  color: #ccc;
+}
+
+.sectionHeadline:hover {
+  color: #3ed8f7;
+  padding-left: 19vmin;
+}
+
+.sectionHeadline2 {
+  font-size: 15vmin;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.08em;
+  transition: all 4s;
+  color: #ccc;
+}
+
+.sectionHeadline2:hover {
+  color: #3ed8f7;
+  padding-left: 90vw;
+}
+
+a, a:visited {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.wideImage {
+  width: 100%;
+}
+
+.verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* Classes for different sized items */
+.item-2x {
+  grid-column-end: span 2;
+  background-color: #444;
+}
+
+.item-3x {
+  grid-column-end: span 3;
+}
+
+.item-2x2 {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
+.item-4x {
+  grid-column-end: span 4;
+}
+
+.item-8x {
+  grid-column-end: span 8;
+}
+
+@keyframes vibingText {
+   0%{ color: #c2c2c2; font-size: 2em;}
+   10%{ color: #c2c2c250; font-size: 2.5em;}
+   20%{ color: #c2c2c260; font-size: 2.3em;}
+   40%{ color: #c2c2c280; font-size: 2.1em;}
+   90%{ color: #c2c2c299; font-size: 2.05em;}
+}
